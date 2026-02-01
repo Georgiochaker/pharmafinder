@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: pharmafinder  # <-- Important! run in this folder
 
     steps:
       - name: Checkout repository
@@ -25,8 +28,6 @@ jobs:
 
       - name: Build project
         run: npm run build
-        # comment this line if you don't have a build script
 
       - name: Run tests
         run: npm test
-        # comment this line if you don't have tests
