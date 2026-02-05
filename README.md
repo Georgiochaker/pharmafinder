@@ -1,15 +1,14 @@
-
 # Techtalks-PharmaFinder
 
 A real-time platform that tracks medication availability in local pharmacies and suggests verified alternatives when a drug is unavailable. Helps patients save time, reduce stress, and find the right medicine quickly. Users and pharmacies can update stock status, ensuring accurate, up-to-date information.
 
-## Project Phases & Team Assignments
+## Simplified Project Phases & Team Assignments
 
 ### Phase 1: Setup & Foundation (Week 1)
 
 - **Georgio Chaker (Team Leader):**
 	- Set up GitHub repository and project structure
-	- Configure development environment (Node.js, mySQL, Redis)
+	- Configure development environment (Node.js, mongoDB, Redis)
 	- Create database schema design
 	- Coordinate team meetings and track progress
 - **Bilal:**
@@ -33,96 +32,138 @@ A real-time platform that tracks medication availability in local pharmacies and
 	- Configure Tailwind CSS and component structure
 	- Create basic routing and page layouts
 
-### Phase 2: Core Features (Week 2 and 3)
+### Phase 2: Core Features (Weeks 2–3)
 
 - **Georgio Chaker:**
-	- Build authentication system (register, login, JWT)
-	- Create user management API endpoints
-	- Implement role-based access control
-	- Code reviews and integration testing
+	- Build simple authentication (register, login) with MongoDB
+	- Create basic user management API endpoints
+	- Review code and help with integration
 - **Bilal:**
-	- Build real-time WebSocket service with Socket.IO
-	- Create inventory update pub/sub system
-	- Implement Redis caching layer
-	- Build notification service backend
+	- Build real-time updates with Socket.IO (basic notifications only)
+	- Add Redis caching for medication search
 - **Ibraheem Kadiri:**
-	- Create API endpoints for medications (search, details)
-	- Build pharmacy API (profile, inventory management)
-	- Implement alternative medications logic
-	- Write database queries and optimize performance
+	- Create medication and pharmacy API endpoints (CRUD, search)
+	- Implement alternatives logic in MongoDB
 - **Rawan:**
-	- Build frontend search interface with filters
-	- Create pharmacy details page UI
-	- Implement map view with Mapbox integration
-	- Design and build admin dashboard UI
+	- Build search and pharmacy details UI
+	- Add map view (Mapbox or static map)
 - **Joelle Hamoud:**
-	- Integrate frontend with backend APIs
-	- Implement real-time updates with Socket.IO client
-	- Build notification subscription UI
-	- Create user profile and settings pages
+	- Connect frontend to backend APIs
+	- Implement real-time updates in frontend
 
-### Phase 3: Advanced Features & Polish (Week 4)
+### Phase 3: Polish & Launch (Week 4)
 
 - **Georgio Chaker:**
-	- Integrate Twilio for SMS notifications
-	- Integrate Firebase Cloud Messaging for push notifications
-	- Final API testing and security audit
-	- Deployment preparation and coordination
+	- Test frontend, fix bugs, and deploy
+
 - **Bilal:**
-	- Set up monitoring with Sentry or Prometheus
-	- Performance optimization and load testing
-	- Deploy backend to production (AWS/similar)
-	- Configure production database and Redis
+	- Deploy backend (Vercel, AWS, or similar)
+
 - **Ibraheem Kadiri:**
-	- Build admin API endpoints (manage pharmacies, medications)
-	- Implement analytics and reporting features
-	- Database optimization and indexing
-	- Create API documentation
+	- Add simple admin endpoints (manage pharmacies, medications)
+
 - **Rawan:**
-	- UI/UX refinements based on testing
-	- Responsive design for mobile devices
-	- Accessibility improvements
-	- Create demo video or presentation materials
+	- Refine UI/UX and ensure mobile responsiveness
+
 - **Joelle Hamoud:**
-	- End-to-end testing with Jest and React Testing Library
-	- Bug fixes and frontend optimization
-	- Deploy frontend to production
-	- Write user documentation
+	- Final API/security testing
+	- Prepare for deployment (env, docs)
 
 ---
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-## Getting Started
+- Focus on core features: search, real-time stock, alternatives, and map view.
+- Use mock data or simple notifications if needed.
+- Keep admin and analytics features basic.
+- Add advanced features only if time allows.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Phases & Step-by-Step Tasks
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Phase 1: Setup & Foundation (Week 1)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Georgio Chaker (Team Leader):**
+- Create the GitHub repo and invite all team members.
+- Set up the project folder structure in the repo.
+- Install Node.js, MongoDB, and Redis locally (share install guides if needed).
+- Create a Notion or Trello board for team task tracking.
+- Schedule and run a team kickoff meeting (share agenda and goals).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Bilal:**
+- Research Socket.IO basics and document how it works (share a summary doc).
+- Set up Docker for local development (write a simple Dockerfile for Node.js).
+- Set up GitHub Actions for CI (use a template for Node.js projects).
+- Help others with backend setup if needed.
 
-## Learn More
+**Ibraheem Kadiri:**
+- Design the medication, pharmacy, and inventory data models (draw a simple ERD or diagram).
+- Help set up MongoDB locally (share connection string format).
+- Write a script to seed test data into MongoDB.
+- Share the seed script and instructions with the team.
 
-To learn more about Next.js, take a look at the following resources:
+**Rawan:**
+- Create a Figma file and share the link with the team.
+- Make wireframes for the search, pharmacy details, and map view pages.
+- Design a UI component library (buttons, inputs, cards, etc.) in Figma.
+- Create a style guide (colors, fonts, spacing) in Figma.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Joelle Hamoud:**
+- Research Mapbox, Twilio, and Firebase basics (share links and notes).
+- Set up a Next.js frontend project (use `npx create-next-app@latest .`).
+- Add TypeScript and Tailwind CSS to the project.
+- Create basic page routes (search, pharmacy details, map view).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### Phase 2: Core Features (Weeks 2–3)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Georgio Chaker:**
+- Build user registration and login (use MongoDB models).
+- Create user management API endpoints (register, login, get user info).
+- Add role-based access control (middleware for admin/user).
+- Review code and help others integrate their work.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Bilal:**
+- Set up Socket.IO for real-time updates (e.g., stock changes, notifications).
+- Add Redis caching for medication search results (use a simple cache middleware).
+
+**Ibraheem Kadiri:**
+- Build CRUD API endpoints for medications and pharmacies.
+- Implement logic for alternative medications in MongoDB (e.g., a field for alternatives).
+
+**Rawan:**
+- Build the search page UI in Next.js using Figma designs.
+- Build the pharmacy details page UI.
+- Add a map view using Mapbox (or a static map if needed).
+- Use the style guide and components from Figma.
+
+**Joelle Hamoud:**
+- Connect the frontend to backend APIs (use fetch or axios).
+- Add real-time updates to the frontend using Socket.IO client.
+
+---
+
+### Phase 3: Polish & Launch (Week 4)
+
+**Georgio Chaker:**
+- Test the frontend, fix bugs, and deploy the site (use Vercel or Netlify).
+
+**Bilal:**
+- Deploy the backend (Vercel, AWS, or similar; write a short deployment guide).
+
+**Ibraheem Kadiri:**
+- Add simple admin endpoints (manage pharmacies, medications).
+
+**Rawan:**
+- Refine UI/UX and ensure mobile responsiveness (test on different devices).
+
+**Joelle Hamoud:**
+- Final API/security testing (check endpoints, permissions, and error handling).
+- Prepare environment variables and documentation for deployment (write a short README section).
+
+---
+
+- Each member should commit and push their work regularly.
+- Use branches for each feature/task (e.g., `feature/search-ui`).
+- Ask for help or feedback in the team chat or meetings.
+- Focus on core features first; add extras only if time allows.
