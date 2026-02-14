@@ -9,10 +9,17 @@
     "lint": "eslint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "body-parser": "^2.2.2",
     "express": "^5.2.1",
     "mongodb": "^7.1.0",
     "mongoose": "^9.1.6",
+=======
+    "bcryptjs": "^3.0.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.1.0",
+    "mongoose": "^9.1.5",
+>>>>>>> f332b0b0f1db6c9986bdfb17f2fa68a9cf914964
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
